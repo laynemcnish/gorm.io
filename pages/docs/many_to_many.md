@@ -108,9 +108,9 @@ GORM allows eager loading has many associations with `Preload`, refer [Preloadin
 
 Please checkout [Association Mode](associations.html#Association-Mode) for working with many2many relations
 
-## Customize JoinTable
+## Customize Join Table
 
-`JoinTable` can be a full-featured model, like having `Soft Delete`，`Hooks` supports and more fields, you can setup it with `SetupJoinTable`, for example:
+`Join Table` can be a full-featured model, like having `Soft Delete`，`Hooks` supports and more fields, you can setup it with `SetupJoinTable`, for example:
 
 {% note warn %}
 **NOTE:**
@@ -140,7 +140,7 @@ func (PersonAddress) BeforeCreate(db *gorm.DB) error {
   // ...
 }
 
-// Change model Person's field Addresses's join table to PersonAddress
+// Change model Person's field Addresses' join table to PersonAddress
 // PersonAddress must defined all required foreign keys or it will raise error
 err := db.SetupJoinTable(&Person{}, "Addresses", &PersonAddress{})
 ```

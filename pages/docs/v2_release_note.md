@@ -718,7 +718,7 @@ db.Create(&user)
 
 #### Join Table
 
-In GORM V2, a `JoinTable` can be a full-featured model, with features like `Soft Delete`，`Hooks`, and define other fields, e.g:
+In GORM V2, a `Join Table` can be a full-featured model, with features like `Soft Delete`，`Hooks`, and define other fields, e.g:
 
 ```go
 type Person struct {
